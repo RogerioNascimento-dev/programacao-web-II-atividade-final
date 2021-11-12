@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\Api\TodoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,3 +16,4 @@ use App\Http\Controllers\Api\AuthController;
 */
 
 Route::post('auth/login', [AuthController::class, 'login']);
+Route::get('todos', [TodoController::class, 'index']);

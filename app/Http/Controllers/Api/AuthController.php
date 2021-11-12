@@ -25,4 +25,8 @@ class AuthController extends Controller
             'token_type' => 'bearer'
         ]);
     }
+    public function refresh()
+    {
+        return $this->respondWithToken(auth('api')->refresh());
+    }
 }
