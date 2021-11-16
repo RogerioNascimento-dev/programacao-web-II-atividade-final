@@ -16,7 +16,7 @@ class Todo extends Model
         'createdUser:id,name'
     ];
 
-    protected $fillable = ['name', 'description', 'finished', 'estimated_date', 'created_user_id'];
+    protected $fillable = ['title', 'description', 'finished', 'estimated_date', 'created_user_id'];
 
     public function createdUser()
     {
@@ -29,5 +29,20 @@ class Todo extends Model
             return Carbon::parse($value)->format('d/m/Y H:i:s');
         }
         return $value;
+    }
+
+    public function rulesStore()
+    {
+        return [
+            'title' => 'required|min:6',
+            'description' => 'required|min:10',
+        ];
+    }
+    public function rulesUpdate()
+    {
+        return [
+            'title' => 'min:6',
+            'description' => 'min:10',
+        ];
     }
 }

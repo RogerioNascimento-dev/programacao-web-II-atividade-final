@@ -16,4 +16,11 @@ use App\Http\Controllers\Api\TodoController;
 */
 
 Route::post('auth/login', [AuthController::class, 'login']);
-Route::get('todos', [TodoController::class, 'index']);
+
+Route::group(['middleware' => ['api.jwt']], function () {
+    Route::post('todos', [TodoController::class, 'store']);
+    Route::get('todos', [TodoController::class, 'index']);
+    Route::get('todos/{id}', [TodoController::class, 'show']);
+    Route::put('todos/{id}', [TodoController::class, 'update']);
+    Route::delete('todos/{id}', [TodoController::class, 'destroy']);
+});
