@@ -12,10 +12,17 @@ class UserSeed extends Seeder
      */
     public function run()
     {
-        if (!User::where('email', 'pabloricardoroxosilva@gmail.com')->first()) {
+        if (!User::where('email', 'pabloroxo@gmail.com')->first()) {
             $user = new User;
             $user->name = 'Pablo Roxo';
-            $user->email = 'pabloricardoroxosilva@gmail.com';
+            $user->email = 'pabloroxo@gmail.com';
+            $user->password = 'password';
+            $user->save();
+        }
+        if (!User::where('email', 'rogerionascimento.dev@gmail.com')->first()) {
+            $user = new User;
+            $user->name = 'Rogério Nascimento';
+            $user->email = 'rogerionascimento.dev@gmail.com';
             $user->password = 'password';
             $user->save();
         }
