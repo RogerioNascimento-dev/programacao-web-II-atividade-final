@@ -14,4 +14,4 @@ uma api com o objetivo realizar um CRUD de Todo List com base no usuário autent
 - `php artisan migrate` Rodar as migrations para criar as tabelas de users e todos
 - `php artisan db:seed` Execurar os seeds conficurados para criar dois usuários para realizar os testes.
 
-Pra facilitar deixei na raiz do projeto o arquivo `requests-Insomnia.json` que pode ser importado no insomnia e os requests para teste já vai estar pronto.
+Pra facilitar deixei na raiz do projeto o arquivo `requests-Insomnia.json` que pode ser importado no insomnia e os requests para teste já vai estar pronto. 
