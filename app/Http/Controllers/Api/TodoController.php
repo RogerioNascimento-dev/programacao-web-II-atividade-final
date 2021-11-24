@@ -1,4 +1,11 @@
 <?php
+/*
+    * Instituição: Unime
+    * Curso: Sistemas de informação
+    * Disciplina: Programação Web II
+    * Professor:Pablo Roxo
+    * Aluno: Rogério de Oliveira Nascimento
+*/
 
 namespace App\Http\Controllers\Api;
 
@@ -13,7 +20,7 @@ class TodoController extends Controller
     public function index(Request $request, TodoService $todoService)
     {
         try {
-            $todos = $todoService->all();
+            $todos = $todoService->all($request);
             return response($todos);
         } catch (Exception $ex) {
             return response(['error' => $ex->getMessage()], 400);
@@ -36,7 +43,7 @@ class TodoController extends Controller
                 return response()->json($validator->errors(), 400);
             }
             $todo = $todoService->store($request);
-            return response($todo);
+            return response($todo, 201);
         } catch (Exception $ex) {
             return response(['error' => $ex->getMessage()], 400);
         }

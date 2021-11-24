@@ -16,11 +16,18 @@ class TodoService
         $this->todo = $todo;
     }
 
-    public function all()
+    public function all(Request $request)
     {
         try {
+
             $user = auth('api')->user();
             return $this->todo
+                ->when($request->title, function ($query) use ($request) {
+                    return $query->where('title', 'like', '%' . $request->title  . '%');
+                })
+                ->when($request->description, function ($query) use ($request) {
+                    return $query->where('description', 'like', '%' . $request->description  . '%');
+                })
                 ->where('created_user_id', $user->id)
                 ->orderBy('title', 'asc')
                 ->get();

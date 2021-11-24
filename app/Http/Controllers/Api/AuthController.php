@@ -1,5 +1,11 @@
 <?php
-
+/*
+    * Instituição: Unime
+    * Curso: Sistemas de informação
+    * Disciplina: Programação Web II
+    * Professor:Pablo Roxo
+    * Aluno: Rogério de Oliveira Nascimento
+*/
 
 namespace App\Http\Controllers\Api;
 
