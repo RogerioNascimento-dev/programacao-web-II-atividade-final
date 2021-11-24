@@ -1,0 +1,272 @@
+{
+    "_type": "export",
+    "__export_format": 4,
+    "__export_date": "2021-11-24T01:26:31.274Z",
+    "__export_source": "insomnia.desktop.app:v2021.6.0",
+    "resources": [
+        {
+            "_id": "req_9d4a8d1d36cd41639822a58c38303622",
+            "parentId": "wrk_857321437f3f46fc9edaa0333a725e9a",
+            "modified": 1637716961199,
+            "created": 1636688183921,
+            "url": "{{ _.base_url }}/auth/login",
+            "name": "Login",
+            "description": "",
+            "method": "POST",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"email\":\"rogerionascimento.dev@gmail.com\",\n\t\"password\":\"password\"\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "id": "pair_b8ab34d850bb4cf6b9cc7a31968ba8e2"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1636688183921,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "wrk_857321437f3f46fc9edaa0333a725e9a",
+            "parentId": null,
+            "modified": 1636688142195,
+            "created": 1636688142195,
+            "name": "Programacao Web 2 Atividade Final",
+            "description": "",
+            "scope": "collection",
+            "_type": "workspace"
+        },
+        {
+            "_id": "req_a7610ed9b41c4dee983e8e6195f56b89",
+            "parentId": "wrk_857321437f3f46fc9edaa0333a725e9a",
+            "modified": 1637715303553,
+            "created": 1636690540236,
+            "url": "{{ _.base_url }}/todos",
+            "name": "Index Todos",
+            "description": "",
+            "method": "GET",
+            "body": {
+                "mimeType": "application/json",
+                "text": ""
+            },
+            "parameters": [
+                {
+                    "id": "pair_ff15bbf278bb40f3be66a56deebd3951",
+                    "name": "description",
+                    "value": "estu",
+                    "description": ""
+                }
+            ],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "id": "pair_b8ab34d850bb4cf6b9cc7a31968ba8e2"
+                }
+            ],
+            "authentication": {
+                "type": "bearer",
+                "token": "{{ _.token }}"
+            },
+            "metaSortKey": -1636622259317.5,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_030c1478794f4bf0b762b9e3a5cf6270",
+            "parentId": "wrk_857321437f3f46fc9edaa0333a725e9a",
+            "modified": 1637715375940,
+            "created": 1636988450598,
+            "url": "{{ _.base_url }}/todos",
+            "name": "Store Todos",
+            "description": "",
+            "method": "POST",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"title\":\"Oi Teste aqui\",\n\t\"description\":\"Mais uma com 10 caracteres\"\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "id": "pair_b8ab34d850bb4cf6b9cc7a31968ba8e2"
+                }
+            ],
+            "authentication": {
+                "type": "bearer",
+                "token": "{{ _.token }}"
+            },
+            "metaSortKey": -1636589297015.75,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_f711440f27894590bfb8ececbc2342bf",
+            "parentId": "wrk_857321437f3f46fc9edaa0333a725e9a",
+            "modified": 1637715338267,
+            "created": 1637101946582,
+            "url": "{{ _.base_url }}/todos/10",
+            "name": "Update Todo",
+            "description": "",
+            "method": "PUT",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"title\":1\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "id": "pair_b8ab34d850bb4cf6b9cc7a31968ba8e2"
+                }
+            ],
+            "authentication": {
+                "type": "bearer",
+                "token": "{{ _.token }}"
+            },
+            "metaSortKey": -1636581056440.3125,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_fbf90b3cb09d4eeda57d037d909bf300",
+            "parentId": "wrk_857321437f3f46fc9edaa0333a725e9a",
+            "modified": 1637717091216,
+            "created": 1636989881747,
+            "url": "{{ _.base_url }}/todos/1",
+            "name": "Show Todo",
+            "description": "",
+            "method": "GET",
+            "body": {
+                "mimeType": "application/json",
+                "text": ""
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "id": "pair_b8ab34d850bb4cf6b9cc7a31968ba8e2"
+                }
+            ],
+            "authentication": {
+                "type": "bearer",
+                "token": "{{ _.token }}"
+            },
+            "metaSortKey": -1636572815864.875,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_35225396c6714c10ab0d51136fa3b5f2",
+            "parentId": "wrk_857321437f3f46fc9edaa0333a725e9a",
+            "modified": 1637716890863,
+            "created": 1636990782227,
+            "url": "{{ _.base_url }}/todos/1",
+            "name": "Delete Todo",
+            "description": "",
+            "method": "DELETE",
+            "body": {
+                "mimeType": "application/json",
+                "text": ""
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "id": "pair_b8ab34d850bb4cf6b9cc7a31968ba8e2"
+                }
+            ],
+            "authentication": {
+                "type": "bearer",
+                "token": "{{ _.token }}"
+            },
+            "metaSortKey": -1636564575289.4375,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "env_bee8e8bce3dec09913e1a46592f60068feef4447",
+            "parentId": "wrk_857321437f3f46fc9edaa0333a725e9a",
+            "modified": 1636985378634,
+            "created": 1636688142208,
+            "name": "Base Environment",
+            "data": {
+                "base_url": "http://localhost:8000/api",
+                "token": "{% response 'body', 'req_9d4a8d1d36cd41639822a58c38303622', 'b64::JC50b2tlbg==::46b', 'always', 60 %}"
+            },
+            "dataPropertyOrder": {
+                "&": [
+                    "base_url",
+                    "token"
+                ]
+            },
+            "color": null,
+            "isPrivate": false,
+            "metaSortKey": 1636688142208,
+            "_type": "environment"
+        },
+        {
+            "_id": "jar_bee8e8bce3dec09913e1a46592f60068feef4447",
+            "parentId": "wrk_857321437f3f46fc9edaa0333a725e9a",
+            "modified": 1636688142212,
+            "created": 1636688142212,
+            "name": "Default Jar",
+            "cookies": [],
+            "_type": "cookie_jar"
+        },
+        {
+            "_id": "spc_e7c01fa3edd440fb889e99f05ba4cffc",
+            "parentId": "wrk_857321437f3f46fc9edaa0333a725e9a",
+            "modified": 1636688142199,
+            "created": 1636688142199,
+            "fileName": "Programacao Web 2 Atividade Final",
+            "contents": "",
+            "contentType": "yaml",
+            "_type": "api_spec"
+        }
+    ]
+}
